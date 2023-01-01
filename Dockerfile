@@ -9,6 +9,6 @@ RUN cargo install --path .
 
 FROM gcr.io/distroless/cc-debian10
 
-COPY --from=build /usr/local/cargo/bin/hexa-domain-tutorial /usr/local/bin/hexa-domain-tutorial
+COPY --from=build /usr/local/cargo/bin/testAWS /usr/local/bin/testAWS
 
 ENTRYPOINT ["/usr/local/bin/hexa-domain-tutorial"]

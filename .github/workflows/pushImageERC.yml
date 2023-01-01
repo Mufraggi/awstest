@@ -17,7 +17,6 @@ jobs:
     - name: Check out code
       uses: actions/checkout@v2
 
-
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
@@ -35,7 +34,7 @@ jobs:
       env:
         REGISTRY: ${{ steps.login-ecr-public.outputs.registry }}
         REGISTRY_ALIAS: m8a8s0t7
-        REPOSITORY: user_service_tutorial
+        REPOSITORY: testaws
         IMAGE_TAG: ${{ github.sha }}
       run: |
         docker build -t $REGISTRY/$REGISTRY_ALIAS/$REPOSITORY:$IMAGE_TAG .

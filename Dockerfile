@@ -11,4 +11,4 @@ FROM gcr.io/distroless/cc-debian10
 
 COPY --from=build /usr/local/cargo/bin/testAWS /usr/local/bin/testAWS
 
-ENTRYPOINT ["/usr/local/bin/hexa-domain-tutorial"]
+ENTRYPOINT ["/usr/local/bin/testAWS"]
